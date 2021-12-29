@@ -50,7 +50,7 @@
     margin: 10px;
 }
 
-@media screen and (max-width:1200px) {
+@media  (max-width:1200px) {
     .photoblock {
         width: 45%;
         background-color: gray;
@@ -58,7 +58,7 @@
     }
 }
 
-@media screen and (max-width:600px) {
+@media  (max-width:600px) {
     .photoblock {
         width: 90%;
         background-color: gray;
