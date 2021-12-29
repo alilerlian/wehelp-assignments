@@ -56,6 +56,11 @@
         margin-right: auto;
         background-color: #faf0e4;
     }
+    .photoblock {
+    width: 45%;
+    margin:10px;
+    background-color: gray;
+    }
 }
 
 @media screen and (max-width:300px) {
@@ -68,10 +73,15 @@
         margin-right: auto;
         background-color: #faf0e4;
     }
+    .photoblock {
+    width: 90%;
+    background-color: gray;
+    }
 }
 
 .photoblock {
     width: 280px;
+    margin:10px;
     background-color: gray;
 }
 
