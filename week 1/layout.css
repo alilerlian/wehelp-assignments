@@ -66,6 +66,26 @@
     background-color: #faf0e4;
 }
 
+@media  (max-width:1200px) {
+   .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        background-color: #faf0e4;
+    }
+}
+
+@media  (max-width:600px) {
+   .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        background-color: #faf0e4;
+    }
+}
+
 .photoblock {
     width: 280px;
     background-color: gray;
