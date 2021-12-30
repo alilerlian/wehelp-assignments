@@ -60,7 +60,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    width: 100%;
+    width: 1200px;
+    margin-left:auto;
+    margin-right:auto;
     background-color: #faf0e4;
 }
 
