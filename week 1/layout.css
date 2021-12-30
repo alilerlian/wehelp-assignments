@@ -30,6 +30,18 @@
     font-size: 15px;
 }
 
+.hambuger {
+    display: none;
+}
+
+@media  (max-width:600px) {
+    .hamburger {
+        flex: none;
+        width: 30px;
+        margin-right: 20px;
+        justify-content: flex-end
+    }
+}
 
 .welcome {
     display: flex;
