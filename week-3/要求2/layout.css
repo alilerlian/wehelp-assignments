@@ -1,0 +1,154 @@
+.frame {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    background-color: #eecfbb;
+}
+
+.title {
+    font-weight: bold;
+    margin-left: 20px;
+    width: 50%;
+}
+
+.items {
+    display: flex;
+    width: 50%;
+    justify-content: flex-end
+}
+
+@media (max-width:600px) {
+    .items {
+        display: none;
+    }
+}
+
+.item {
+    flex: none;
+    margin-right: 20px;
+    font-size: 15px;
+}
+
+.hamburger {
+    display: none;
+}
+
+@media (max-width:600px) {
+    .hamburger {
+        display: flex;
+        width: 50%;
+        padding: 20px;
+        justify-content: flex-end
+    }
+}
+
+.welcome {
+    display: flex;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    background-color: white
+}
+
+.text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #faf0e4;
+}
+
+@media (max-width:1200px) {
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        background-color: #faf0e4;
+    }
+}
+
+@media (max-width:600px) {
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        background-color: #faf0e4;
+    }
+}
+
+.photoblock {
+    width: 280px;
+    background-color: #efeff1;
+    margin: 10px;
+}
+
+@media (max-width:1200px) {
+    .photoblock {
+        width: 45%;
+        background-color: #efeff1;
+        margin: 10px;
+    }
+}
+
+@media (max-width:600px) {
+    .photoblock {
+        width: 90%;
+        background-color: #efeff1;
+        margin: 10px;
+    }
+}
+
+.photo2 {
+    background-image: url('https://raw.githubusercontent.com/alilerlian/wehelp-assignment/main/week%201/IMG_3729.JPG');
+}
+
+.photo3 {
+    background-image: url('https://raw.githubusercontent.com/alilerlian/wehelp-assignment/main/week%201/IMG_3710.JPG');
+}
+
+.photo4 {
+    background-image: url('https://raw.githubusercontent.com/alilerlian/wehelp-assignment/main/week%201/IMG_3663.JPG');
+}
+
+.photo5 {
+    background-image: url('https://raw.githubusercontent.com/alilerlian/wehelp-assignment/main/week%201/IMG_3643.JPG');
+}
+
+.photo6 {
+    background-image: url('https://raw.githubusercontent.com/alilerlian/wehelp-assignment/main/week%201/IMG_3567.JPG');
+}
+
+.photo7 {
+    background-image: url('https://raw.githubusercontent.com/alilerlian/wehelp-assignment/main/week%201/IMG_3499.JPG');
+}
+
+.photo8 {
+    background-image: url('https://raw.githubusercontent.com/alilerlian/wehelp-assignment/main/week%201/IMG_3464.JPG');
+}
+
+.photo {
+    width: 100%;
+    height: 210px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    object-fit: cover;
+}
+
+.photointro {
+    height: 50px;
+    font-size: 20px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #efeff1;
+}
