@@ -7,10 +7,6 @@ request.send();
 request.onload = function() {
     const datafile = request.response;
     newdata(datafile)
-
-    console.log(datafile)
-
-
 }
 
 function newdata(obj) {
@@ -18,7 +14,6 @@ function newdata(obj) {
     let spot_list = [];
     for (var i = 0; i < n; i++) {
         let photo_split = obj['result']["results"][i]["file"].split("https://");
-        console.log(photo_split);
         let photo_site = "https://" + photo_split[1];
         let newtitle = obj["result"]["results"][i]["stitle"];
 
@@ -28,12 +23,12 @@ function newdata(obj) {
         spot_list.push(singlespot);
 
     }
-
-    console.log(spot_list)
+    const gallery = document.createElement('div');
+    gallery.className = "gallery";
+    document.body.appendChild(gallery);
 
     for (var j = 0; j < spot_list.length; j++) {
-        const gallery = document.createElement('div');
-        gallery.className = "gallery";
+
 
         const newdiv = document.createElement('div');
         newdiv.className = "photoblock";
@@ -45,7 +40,6 @@ function newdata(obj) {
         div2.className = "photointro";
         const textNode = document.createTextNode(spot_list[j]["spottitle"]);
 
-        document.body.appendChild(gallery);
         gallery.appendChild(newdiv);
         newdiv.appendChild(newimg);
         newdiv.appendChild(div2);
