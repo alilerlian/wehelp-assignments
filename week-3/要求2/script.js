@@ -27,7 +27,7 @@ function newdata(obj) {
     gallery.className = "gallery";
     document.body.appendChild(gallery);
 
-    for (var j = 0; j < spot_list.length; j++) {
+    for (var j = 0; j < 8; j++) {
 
 
         const newdiv = document.createElement('div');
