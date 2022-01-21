@@ -35,10 +35,11 @@ def singin():
 def member():
     account = session["accountSituation"]  # 取得 資料=session["欄位名稱"]
     password = session["passwordSituation"]
-    if account == False and password == False:
-        return redirect("/")  # 非登入狀態跳回首頁
-    else:
+    accountList = session["accountList "]
+    if account == accountList["account"] and password == accountList["password"]:
         return render_template("member.html")
+    else:
+        return redirect("/")  # 非登入狀態跳回首頁
 
     # return "登入成功"
 
