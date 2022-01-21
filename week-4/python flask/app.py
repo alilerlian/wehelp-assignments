@@ -18,10 +18,13 @@ def singin():
     accountList = {'account': 'test', 'password': 'test'}
     account = request.form["account"]
     password = request.form["password"]
-    session["accountSituation"] = account  # session["欄位名稱"]=資料
-    session["passwordSituation"] = password
-    session["accountList "] = accountList
-    if account == accountList["account"] and password == accountList["password"]:
+    # session["欄位名稱"]=資料
+    #session["passwordSituation"] = password
+    #session["accountList "] = accountList
+    accountSituation = account == accountList["account"] and password == accountList["password"]
+    session["accountSituation"] = accountSituation
+
+    if accountSituation == True:
         return redirect("/member")
     elif len(account) != 0 or len(password) != 0:
         if account != accountList["account"] or password != accountList["password"]:
@@ -33,10 +36,10 @@ def singin():
 
 @app.route("/member")  # 登入成功頁面
 def member():
-    account = session["accountSituation"]  # 取得 資料=session["欄位名稱"]
-    password = session["passwordSituation"]
-    accountList = session["accountList "]
-    if account == accountList["account"] and password == accountList["password"]:
+    accountSituation = session["accountSituation"]  # 取得 資料=session["欄位名稱"]
+    #password = session["passwordSituation"]
+    #accountList = session["accountList "]
+    if accountSituation == True:
         return render_template("member.html")
     else:
         return redirect("/")  # 非登入狀態跳回首頁
