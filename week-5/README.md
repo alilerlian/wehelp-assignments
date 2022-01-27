@@ -1,5 +1,5 @@
-要求三
-1.
+要求三  
+1.  
 INSERT INTO `member`(`id`,`name`,`username`,`password`,`follower_count`) 
 VALUES(138,'APPLE','test','test',58);
 INSERT INTO `member`(`id`,`name`,`username`,`password`,`follower_count`) 
