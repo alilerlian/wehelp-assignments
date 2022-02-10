@@ -50,8 +50,12 @@ def singin():
     session["accountSituation"] = accountSituation  # session["欄位名稱"]=資料 儲存帳號狀態
 
     if accountSituation == True:
+        mycursor.execute("SELECT username,name FROM members")
+        memberName = dict(mycursor.fetchall())  # 取得名字 儲存名字
+        name = memberName[username]
+        session["name"] = name
         return redirect("/member")
-    elif accountSituation == False and (len(username) != 0 or len(password) != 0):
+    elif accountSituation == False and (len(username) != 0 and len(password) != 0):
         return redirect("/error?message=帳號密碼錯誤")
     elif len(username) == 0 or len(password) == 0:
         return redirect("/error?message=請輸入帳號密碼")
@@ -61,8 +65,10 @@ def singin():
 @app.route("/member")  # 登入成功頁面
 def member():
     accountSituation = session["accountSituation"]  # 取得 資料=session["欄位名稱"]
+    name = session["name"]  # 取得儲存的名字
+
     if accountSituation == True:
-        return render_template("member.html")
+        return render_template("member.html", name=name)
     else:
         return redirect("/")  # 非登入狀態跳回首頁
     # return "登入成功"

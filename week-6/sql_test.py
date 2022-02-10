@@ -51,7 +51,18 @@ mycursor = mydb.cursor()
 # if (username,) in memberUsername:
 #     print(memberUsername)
 
-mycursor.execute("SELECT username,password FROM members")
-memberData = mycursor.fetchall()
-if ('BBB', 'bbb') in memberData:
-    print(memberData)
+# mycursor.execute("SELECT username,password FROM members")
+# memberData = mycursor.fetchall()
+# if ('BBB', 'bbb') in memberData:
+#     print(memberData)
+
+mycursor.execute("SELECT id,username FROM members")
+memberID = mycursor.fetchall()
+print(memberID[0])
+print(memberID[0][0])
+member = "BBB"
+memberID = dict(memberID)
+print(memberID)
+for id in memberID.keys():
+    if memberID[id] == member:
+        print(id)
