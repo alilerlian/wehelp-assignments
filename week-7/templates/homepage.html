@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>HOMEPAGE</title>
+
+    <style type="text/css">
+        .top {
+            background-color: #D18063;
+            height: 150px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .title {
+            color: white;
+            font-size: 30px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body style="margin:0px;font-family:Microsoft JhengHei;">
+    <div class="top"><span class="title">歡迎光臨，請註冊或登入系統</span></div>
+    <br/>
+    <div style="text-align: center;font-size: 25px;">註冊帳號</div>
+    <div class="content">
+        <form action="/signup" method="POST">
+            姓名 <input type="text" name="name" required/>
+            <br/> 帳號
+            <input type="text" name="username" required/>
+            <br/> 密碼
+            <input type="password" name="password" required/><br/>
+            <button>註冊</button>
+        </form>
+    </div>
+    <div style="text-align: center;font-size: 25px;">登入系統</div>
+    <div class="content">
+        <form action="/signin" method="POST">
+            帳號 <input type="text" name="username" />
+            <br/> 密碼
+            <input type="password" name="password" /><br/>
+            <button>登入</button>
+        </form>
+    </div>
+
+</body>
+
+</html>
